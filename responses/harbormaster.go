@@ -39,3 +39,38 @@ type HarbormasterBuildableSearchResponseItemFields struct {
 type BuildableStatus struct {
 	Value entities.BuildableStatus `json:"value"`
 }
+
+// HarbormasterBuildSearchResponse contains fields that are in server
+// response to differential.revision.search.
+type HarbormasterBuildSearchResponse struct {
+	// Data contains search results.
+	Data []*HarbormasterBuildSearchResponseItem `json:"data"`
+
+	// Curson contains paging data.
+	Cursor SearchCursor `json:"cursor,omitempty"`
+}
+
+// HarbormasterBuildSearchResponseItem contains information about a
+// particular search result.
+type HarbormasterBuildSearchResponseItem struct {
+	ResponseObject
+	Fields HarbormasterBuildSearchResponseItemFields `json:"fields"`
+	SearchCursor
+}
+
+// HarbormasterBuildSearchResponseItemFields is a collection of object
+// fields.
+type HarbormasterBuildSearchResponseItemFields struct {
+	BuildablePHID string             `json:"buildablePHID"`
+	BuildPlanPHID string             `json:"buildPlanPHID"`
+	BuildStatus   BuildStatus        `json:"buildStatus"`
+	InitiatorPHID string             `json:"initiatorPHID"`
+	Name          string             `json:"name"`
+	DateCreated   util.UnixTimestamp `json:"dateCreated"`
+	DateModified  util.UnixTimestamp `json:"dateModified"`
+}
+
+// BuildStatus is a container of status value.
+type BuildStatus struct {
+	Value entities.BuildStatus `json:"value"`
+}

@@ -94,3 +94,89 @@ func TestHarbormasterBuildableSearch(t *testing.T) {
 	}
 	assert.Equal(t, &want, resp)
 }
+
+const buildSearchResponseJSON = `{
+  "result": {
+	"data": [
+	  {
+	    "id": 133550439,
+	    "type": "HMBD",
+	    "phid": "PHID-HMBD-zkyrlqywr4ahneo3pgih",
+	    "fields": {
+	  	"buildablePHID": "PHID-HMBB-75lynfoojfsgoezq4dg6",
+	  	"buildPlanPHID": "PHID-HMCP-ieis77mkeighxvxu3zvi",
+	  	"buildStatus": {
+	  	  "value": "passed",
+	  	  "name": "Passed",
+	  	  "color.ansi": "green"
+	  	},
+	  	"initiatorPHID": "PHID-HRUL-57w2uekbfssb5py6uf57",
+	  	"name": "metadata-check-diff for go-code",
+	  	"dateCreated": 1623311845,
+	  	"dateModified": 1623312245,
+	  	"policy": {
+	  	  "view": "users",
+	  	  "edit": "users"
+	  	}
+	    },
+	    "attachments": {}
+	  }
+	],
+    "maps": {},
+    "query": {
+      "queryKey": null
+    },
+    "cursor": {
+      "limit": 100,
+      "after": null,
+      "before": null,
+      "order": null
+    }
+  }
+}`
+
+func TestHarbormasterBuildSearch(t *testing.T) {
+	s := server.New()
+	defer s.Close()
+	s.RegisterCapabilities()
+	response := server.ResponseFromJSON(buildSearchResponseJSON)
+	s.RegisterMethod(HarbormasterBuildSearchMethod, http.StatusOK, response)
+
+	c, err := Dial(s.GetURL(), &core.ClientOptions{
+		APIToken: "some-token",
+	})
+	assert.Nil(t, err)
+	req := requests.HarbormasterBuildSearchRequest{
+		Constraints: &requests.HarbormasterBuildSearchConstraints{
+			IDs: []int{133550439},
+		},
+	}
+	resp, err := c.HarbormasterBuildSearch(req)
+	assert.NoError(t, err)
+	want := responses.HarbormasterBuildSearchResponse{
+		Data: []*responses.HarbormasterBuildSearchResponseItem{
+			{
+				ResponseObject: responses.ResponseObject{
+					ID:   133550439,
+					Type: "HMBD",
+					PHID: "PHID-HMBD-zkyrlqywr4ahneo3pgih",
+				},
+				Fields: responses.HarbormasterBuildSearchResponseItemFields{
+					BuildablePHID: "PHID-HMBB-75lynfoojfsgoezq4dg6",
+					BuildPlanPHID: "PHID-HMCP-ieis77mkeighxvxu3zvi",
+					BuildStatus: responses.BuildStatus{
+						Value: "passed",
+					},
+					InitiatorPHID: "PHID-HRUL-57w2uekbfssb5py6uf57",
+					Name:          "metadata-check-diff for go-code",
+					DateCreated:   timestamp(1623311845),
+					DateModified:  timestamp(1623312245),
+				},
+			},
+		},
+		Cursor: responses.SearchCursor{
+			Limit: 100,
+		},
+	}
+	assert.Equal(t, &want, resp)
+}

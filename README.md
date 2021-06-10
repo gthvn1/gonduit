@@ -124,6 +124,7 @@ for more information on how to use them.
 - edge.search
 - file.download
 - harbormaster.buildable.search
+- harbormaster.build.search
 - macro.creatememe
 - maniphest.createtask
 - maniphest.gettasktransactions
