@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.13.0] - 2021-06-11
+### Added
+- Support for `harbormaster.build.search` method.
+
 ## [0.12.0] - 2020-12-10
 ### Added
 - Support for `project.search` method.
