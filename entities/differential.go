@@ -16,7 +16,7 @@ type DifferentialRevision struct {
 	DateCreated    util.UnixTimestamp                 `json:"dateCreated"`
 	DateModified   util.UnixTimestamp                 `json:"dateModified"`
 	AuthorPHID     string                             `json:"authorPHID"`
-	Status         constants.DifferentialStatusLegacy `json:"status"`
+	Status         constants.DifferentialStatusLegacy `json:"status,string"`
 	StatusName     string                             `json:"statusName"`
 	Branch         string                             `json:"branch"`
 	Summary        string                             `json:"summary"`
