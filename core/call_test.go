@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uber/gonduit/responses"
-	"github.com/uber/gonduit/test/server"
+	"github.com/gthvn1/gonduit/responses"
+	"github.com/gthvn1/gonduit/test/server"
 )
 
 func TestGetEndpointURI(t *testing.T) {

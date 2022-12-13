@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.13.1] - 2022-12-13
+- Changed import paths from `etcinit` to `gthvn1`
+- Apply Fix json cannot unmarshal pullrequest
+
 ## [0.13.0] - 2021-06-11
 ### Added
 - Support for `harbormaster.build.search` method.
@@ -112,5 +116,5 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.0] - 2018-11-19
 ### Changed
-- Changed import paths from `etcinit` to `uber`.
+- Changed import paths from `etcinit` to `gthvn1`.
 - Updated vesions of dependencies.

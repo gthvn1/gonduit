@@ -1,6 +1,6 @@
 package entities
 
-import "github.com/uber/gonduit/util"
+import "github.com/gthvn1/gonduit/util"
 
 // ManiphestTaskTranscation represents a single task's transcation on Maniphest.
 type ManiphestTaskTranscation struct {

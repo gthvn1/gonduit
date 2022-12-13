@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uber/gonduit/requests"
+	"github.com/gthvn1/gonduit/requests"
 )
 
 func TestMakeRequest(t *testing.T) {

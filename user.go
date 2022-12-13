@@ -1,8 +1,8 @@
 package gonduit
 
 import (
-	"github.com/uber/gonduit/requests"
-	"github.com/uber/gonduit/responses"
+	"github.com/gthvn1/gonduit/requests"
+	"github.com/gthvn1/gonduit/responses"
 )
 
 // UserQuery performs a call to differential.query.

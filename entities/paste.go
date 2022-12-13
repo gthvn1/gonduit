@@ -1,6 +1,6 @@
 package entities
 
-import "github.com/uber/gonduit/util"
+import "github.com/gthvn1/gonduit/util"
 
 // PasteItem is a result item for paste queries.
 type PasteItem struct {

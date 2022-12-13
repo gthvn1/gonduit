@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uber/gonduit/core"
-	"github.com/uber/gonduit/entities"
-	"github.com/uber/gonduit/requests"
-	"github.com/uber/gonduit/responses"
-	"github.com/uber/gonduit/test/server"
+	"github.com/gthvn1/gonduit/core"
+	"github.com/gthvn1/gonduit/entities"
+	"github.com/gthvn1/gonduit/requests"
+	"github.com/gthvn1/gonduit/responses"
+	"github.com/gthvn1/gonduit/test/server"
 )
 
 func TestDifferentialGetCommitPaths(t *testing.T) {

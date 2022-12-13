@@ -1,6 +1,6 @@
 package responses
 
-import "github.com/uber/gonduit/entities"
+import "github.com/gthvn1/gonduit/entities"
 
 // ConduitCapabilitiesResponse represents a response from calling
 // conduit.capabilities.

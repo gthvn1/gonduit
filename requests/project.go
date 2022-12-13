@@ -1,8 +1,8 @@
 package requests
 
 import (
-	"github.com/uber/gonduit/constants"
-	"github.com/uber/gonduit/entities"
+	"github.com/gthvn1/gonduit/constants"
+	"github.com/gthvn1/gonduit/entities"
 )
 
 // ProjectQueryRequest represents a request to project.query.

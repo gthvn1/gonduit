@@ -1,7 +1,7 @@
 package requests
 
 import (
-	"github.com/uber/gonduit/entities"
+	"github.com/gthvn1/gonduit/entities"
 )
 
 // HarbormasterBuildableSearchRequest represents a request to

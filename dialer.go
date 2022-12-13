@@ -3,9 +3,9 @@ package gonduit
 import (
 	"context"
 
-	"github.com/uber/gonduit/core"
-	"github.com/uber/gonduit/responses"
-	"github.com/uber/gonduit/util"
+	"github.com/gthvn1/gonduit/core"
+	"github.com/gthvn1/gonduit/responses"
+	"github.com/gthvn1/gonduit/util"
 )
 
 // A Dialer contains options for connecting to an address.

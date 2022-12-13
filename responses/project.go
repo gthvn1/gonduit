@@ -1,8 +1,8 @@
 package responses
 
 import (
-	"github.com/uber/gonduit/entities"
-	"github.com/uber/gonduit/util"
+	"github.com/gthvn1/gonduit/entities"
+	"github.com/gthvn1/gonduit/util"
 )
 
 // ProjectQueryResponse represents a response from calling project.query.

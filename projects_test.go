@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/uber/gonduit/core"
-	"github.com/uber/gonduit/requests"
-	"github.com/uber/gonduit/responses"
-	"github.com/uber/gonduit/test/server"
+	"github.com/gthvn1/gonduit/core"
+	"github.com/gthvn1/gonduit/requests"
+	"github.com/gthvn1/gonduit/responses"
+	"github.com/gthvn1/gonduit/test/server"
 )
 
 const projectSearchResponseJSON = `{

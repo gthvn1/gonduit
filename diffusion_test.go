@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uber/gonduit/core"
-	"github.com/uber/gonduit/requests"
-	"github.com/uber/gonduit/responses"
-	"github.com/uber/gonduit/test/server"
+	"github.com/gthvn1/gonduit/core"
+	"github.com/gthvn1/gonduit/requests"
+	"github.com/gthvn1/gonduit/responses"
+	"github.com/gthvn1/gonduit/test/server"
 )
 
 const repositorySearchResponseJSON = `{
@@ -43,7 +43,7 @@ const repositorySearchResponseJSON = `{
               "fields": {
                 "repositoryPHID": "PHID-REPO-meb4ivps5qj5gtlkfc7v",
                 "uri": {
-                  "raw": "git@github.com:uber/gonduit.git"
+                  "raw": "git@github.com:gthvn1/gonduit.git"
                 },
                 "credentialPHID": "PHID-CDTL-33r3eatdjwks355etw47",
                 "disabled": false,
@@ -124,7 +124,7 @@ func TestDiffusionRepositorySearch(t *testing.T) {
 							{
 								Fields: responses.RepositoryURIItemFields{
 									URI: responses.RepositoryURI{
-										Raw: "git@github.com:uber/gonduit.git",
+										Raw: "git@github.com:gthvn1/gonduit.git",
 									},
 									Disabled:     false,
 									DateCreated:  timestamp(1489737532),

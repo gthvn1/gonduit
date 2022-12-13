@@ -1,6 +1,6 @@
 package responses
 
-import "github.com/uber/gonduit/entities"
+import "github.com/gthvn1/gonduit/entities"
 
 // EdgeSearchResponse represents a response of the edge.search call.
 type EdgeSearchResponse struct {
